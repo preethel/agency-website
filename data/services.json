@@ -1,0 +1,38 @@
+[
+  {
+    "id": "1",
+    "icon": "Code2",
+    "title": "Full-Stack Development",
+    "description": "End-to-end web application development using React, Next.js, TypeScript, Node.js, C#, and .NET. Building scalable, maintainable, and high-performance solutions."
+  },
+  {
+    "id": "2",
+    "icon": "Brain",
+    "title": "AI/ML Solutions",
+    "description": "Intelligent systems powered by machine learning and artificial intelligence. From data analysis to predictive models and automation."
+  },
+  {
+    "id": "3",
+    "icon": "Layers",
+    "title": "SaaS Platform Development",
+    "description": "Complete SaaS solutions from concept to deployment. Multi-tenant architecture, subscription management, and scalable infrastructure."
+  },
+  {
+    "id": "4",
+    "icon": "TrendingUp",
+    "title": "Trading & Fintech Systems",
+    "description": "Real-time trading platforms, financial analytics, and secure payment systems. Built for performance, reliability, and compliance."
+  },
+  {
+    "id": "5",
+    "icon": "Cloud",
+    "title": "Cloud Solutions & DevOps",
+    "description": "Cloud infrastructure setup, containerization with Docker, CI/CD pipelines, and automated deployment on AWS, Azure, and GCP."
+  },
+  {
+    "id": "6",
+    "icon": "Smartphone",
+    "title": "Mobile App Development",
+    "description": "Native and cross-platform mobile applications with React Native and Flutter. Seamless user experiences on iOS and Android."
+  }
+]

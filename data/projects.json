@@ -1,0 +1,85 @@
+[
+  {
+    "id": "1",
+    "name": "HIT.AI.SAAS",
+    "description": "Advanced AI-powered SaaS platform with intelligent automation and machine learning capabilities",
+    "repo": "preethel/HIT.AI.SAAS",
+    "repoUrl": "https://github.com/preethel/HIT.AI.SAAS",
+    "languages": [
+      { "name": "JavaScript", "percentage": 95.7 },
+      { "name": "C#", "percentage": 1.5 },
+      { "name": "TypeScript", "percentage": 1.3 },
+      { "name": "HTML", "percentage": 1.1 },
+      { "name": "CSS", "percentage": 0.3 },
+      { "name": "SCSS", "percentage": 0.1 }
+    ]
+  },
+  {
+    "id": "2",
+    "name": "TradingApp",
+    "description": "Comprehensive trading platform with real-time market data, analytics, and automated trading capabilities",
+    "repo": "preethel/TradingApp",
+    "repoUrl": "https://github.com/preethel/TradingApp",
+    "languages": [
+      { "name": "TypeScript", "percentage": 56.9 },
+      { "name": "C#", "percentage": 39.9 },
+      { "name": "Shell", "percentage": 1.8 },
+      { "name": "Dockerfile", "percentage": 0.7 },
+      { "name": "CSS", "percentage": 0.5 },
+      { "name": "HTML", "percentage": 0.1 },
+      { "name": "JavaScript", "percentage": 0.1 }
+    ]
+  },
+  {
+    "id": "3",
+    "name": "Soplyn",
+    "description": "Enterprise-grade supply chain management system with inventory tracking and analytics",
+    "repo": "preethel/Soplyn",
+    "repoUrl": "https://github.com/preethel/Soplyn",
+    "languages": [
+      { "name": "C#", "percentage": 60.3 },
+      { "name": "TypeScript", "percentage": 36.6 },
+      { "name": "Dockerfile", "percentage": 2.5 },
+      { "name": "Other", "percentage": 0.6 }
+    ]
+  },
+  {
+    "id": "4",
+    "name": "OnPoint-Space",
+    "description": "Modern workspace management platform for teams and organizations with collaboration features",
+    "repo": "hrTomal/OnPoint-Space-Backend + hrTomal/OnPoint-Frontend",
+    "repoUrl": "https://github.com/hrTomal/OnPoint-Space-Backend",
+    "languages": [
+      { "name": "C#", "percentage": 49.05 },
+      { "name": "JavaScript", "percentage": 48.05 },
+      { "name": "CSS", "percentage": 1.8 },
+      { "name": "Dockerfile", "percentage": 1.0 },
+      { "name": "Other", "percentage": 0.1 }
+    ]
+  },
+  {
+    "id": "5",
+    "name": "Aurora",
+    "description": "Next-generation cloud infrastructure management tool with automated deployment and scaling",
+    "repo": "preethel/aurora",
+    "repoUrl": "https://github.com/preethel/aurora",
+    "languages": [
+      { "name": "TypeScript", "percentage": 78.8 },
+      { "name": "Shell", "percentage": 19.1 },
+      { "name": "Dockerfile", "percentage": 1.1 },
+      { "name": "Other", "percentage": 1.0 }
+    ]
+  },
+  {
+    "id": "6",
+    "name": "LocalAgent",
+    "description": "Intelligent local agent for Windows automation, system management, and process optimization",
+    "repo": "preethel/LocalAgent",
+    "repoUrl": "https://github.com/preethel/LocalAgent",
+    "languages": [
+      { "name": "PowerShell", "percentage": 73.0 },
+      { "name": "C#", "percentage": 22.5 },
+      { "name": "Inno Setup", "percentage": 4.5 }
+    ]
+  }
+]

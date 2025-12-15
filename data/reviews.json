@@ -1,0 +1,56 @@
+[
+  {
+    "id": "1",
+    "name": "Sarah Johnson",
+    "company": "TechCorp Inc.",
+    "position": "CTO",
+    "review": "Outstanding work! The team delivered our SaaS platform ahead of schedule with exceptional quality. Their expertise in React and .NET was evident throughout the project. Highly recommended!",
+    "rating": 5,
+    "initials": "SJ"
+  },
+  {
+    "id": "2",
+    "name": "Michael Chen",
+    "company": "FinanceHub",
+    "position": "Product Manager",
+    "review": "Working with this agency was a game-changer for our trading platform. They understood our complex requirements and delivered a robust, scalable solution. The attention to detail was impressive.",
+    "rating": 5,
+    "initials": "MC"
+  },
+  {
+    "id": "3",
+    "name": "Emily Rodriguez",
+    "company": "StartupXYZ",
+    "position": "CEO",
+    "review": "Professional, responsive, and incredibly talented. They transformed our idea into a beautiful, functional web application. The team's expertise in modern technologies is unmatched.",
+    "rating": 5,
+    "initials": "ER"
+  },
+  {
+    "id": "4",
+    "name": "David Thompson",
+    "company": "Enterprise Solutions Ltd",
+    "position": "Director of Engineering",
+    "review": "Excellent communication and technical skills. The agency handled our enterprise-level requirements with ease and delivered a solution that exceeded our expectations. Would definitely work with them again.",
+    "rating": 5,
+    "initials": "DT"
+  },
+  {
+    "id": "5",
+    "name": "Lisa Park",
+    "company": "Digital Innovations",
+    "position": "VP of Product",
+    "review": "Their ability to understand our business needs and translate them into a technical solution was remarkable. The final product was polished, performant, and exactly what we needed.",
+    "rating": 5,
+    "initials": "LP"
+  },
+  {
+    "id": "6",
+    "name": "James Wilson",
+    "company": "CloudTech Systems",
+    "position": "Technical Lead",
+    "review": "Best development team we've worked with. Their knowledge of cloud technologies and modern frameworks helped us build a cutting-edge platform. Great experience from start to finish!",
+    "rating": 5,
+    "initials": "JW"
+  }
+]

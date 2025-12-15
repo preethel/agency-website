@@ -1,0 +1,52 @@
+[
+  {
+    "id": "1",
+    "name": "React",
+    "category": "Frontend"
+  },
+  {
+    "id": "2",
+    "name": "Next.js",
+    "category": "Frontend"
+  },
+  {
+    "id": "3",
+    "name": "TypeScript",
+    "category": "Language"
+  },
+  {
+    "id": "4",
+    "name": "C#",
+    "category": "Language"
+  },
+  {
+    "id": "5",
+    "name": ".NET",
+    "category": "Backend"
+  },
+  {
+    "id": "6",
+    "name": "Node.js",
+    "category": "Backend"
+  },
+  {
+    "id": "7",
+    "name": "Python",
+    "category": "Language"
+  },
+  {
+    "id": "8",
+    "name": "Docker",
+    "category": "DevOps"
+  },
+  {
+    "id": "9",
+    "name": "AWS",
+    "category": "Cloud"
+  },
+  {
+    "id": "10",
+    "name": "Azure",
+    "category": "Cloud"
+  }
+]

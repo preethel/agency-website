@@ -1,0 +1,29 @@
+[
+  {
+    "id": "1",
+    "name": "Preethel",
+    "title": "Full-Stack Developer & Tech Lead",
+    "bio": "Expert in building scalable web applications with React, Next.js, TypeScript, and .NET. Specialized in SaaS platforms, AI/ML solutions, and fintech systems.",
+    "linkedin": "https://www.linkedin.com/in/preethel",
+    "skills": ["React", "Next.js", "TypeScript", "C#", ".NET", "Node.js", "AI/ML", "Cloud Architecture"],
+    "initials": "P"
+  },
+  {
+    "id": "2",
+    "name": "Rakibul Islam Raju",
+    "title": "Senior Full-Stack Engineer",
+    "bio": "Passionate about creating elegant solutions to complex problems. Expertise in modern web technologies, microservices architecture, and cloud solutions.",
+    "linkedin": "https://www.linkedin.com/in/rakibul-islam-raju",
+    "skills": ["JavaScript", "TypeScript", "React", "Node.js", "Docker", "AWS", "PostgreSQL", "MongoDB"],
+    "initials": "RR"
+  },
+  {
+    "id": "3",
+    "name": "Atiq Morshed Rabby",
+    "title": "Software Engineer & DevOps Specialist",
+    "bio": "Focused on building robust backend systems and automating deployment pipelines. Strong background in cloud infrastructure and containerization.",
+    "linkedin": "https://www.linkedin.com/in/atiq-morshed-rabby",
+    "skills": ["Python", "Go", "Docker", "Kubernetes", "Azure", "CI/CD", "Terraform", "DevOps"],
+    "initials": "AR"
+  }
+]
