@@ -40,12 +40,12 @@ export default function Contact() {
       });
 
       if (res.ok) {
-        toast.success("Message sent successfully! We'll get back to you soon.");
+        toast.success("Message sent successfully! We&apos;ll get back to you soon.");
         reset();
       } else {
         toast.error("Something went wrong. Please try again.");
       }
-    } catch (error) {
+    } catch {
       toast.error("Failed to send message. Please try again.");
     } finally {
       setIsLoading(false);
@@ -66,7 +66,7 @@ export default function Contact() {
             Get In Touch
           </h2>
           <p className="text-gray-600 dark:text-gray-400 text-lg max-w-2xl mx-auto">
-            Have a project in mind? Let's discuss how we can help you
+            Have a project in mind? Let&apos;s discuss how we can help you
           </p>
         </motion.div>
 

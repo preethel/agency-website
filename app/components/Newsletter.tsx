@@ -41,7 +41,7 @@ export default function Newsletter() {
       } else {
         toast.error("Something went wrong. Please try again.");
       }
-    } catch (error) {
+    } catch {
       toast.error("Failed to subscribe. Please try again.");
     } finally {
       setIsLoading(false);

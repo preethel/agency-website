@@ -46,6 +46,7 @@ export default function Services() {
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           {services.map((service) => {
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
             const Icon = (LucideIcons as any)[service.icon] || LucideIcons.Code2;
             return (
               <motion.div

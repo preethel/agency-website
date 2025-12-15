@@ -64,7 +64,7 @@ export default function Reviews() {
 
               {/* Review Text */}
               <p className="text-gray-600 dark:text-gray-400 mb-6 italic">
-                "{review.review}"
+                &quot;{review.review}&quot;
               </p>
 
               {/* Client Info */}
