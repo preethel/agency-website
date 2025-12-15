@@ -2,7 +2,7 @@
 
 A modern, fully functional agency website built with **Next.js 14+**, featuring a JSON-driven architecture for easy content management, stunning animations, and a complete set of features for showcasing your agency's work.
 
-![Next.js](https://img.shields.io/badge/Next.js-14.2.0-black)
+![Next.js](https://img.shields.io/badge/Next.js-14.2.35-black)
 ![React](https://img.shields.io/badge/React-18.3.0-blue)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.4.0-blue)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4.0-38B2AC)
@@ -35,7 +35,7 @@ A modern, fully functional agency website built with **Next.js 14+**, featuring 
 ## 🚀 Tech Stack
 
 ### Core
-- **Next.js 14.2.0** - React framework with App Router
+- **Next.js 14.2.35** - React framework with App Router
 - **React 18.3.0** - UI library
 - **TypeScript 5.4.0** - Type safety
 
