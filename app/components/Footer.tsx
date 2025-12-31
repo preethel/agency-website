@@ -12,7 +12,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <div>
-            <div className="relative w-32 h-10 mb-4">
+            <div className="relative w-20 h-10 mb-4">
               <Image
                 src="/Ark8 Logo-White.svg"
                 alt={config.siteName}

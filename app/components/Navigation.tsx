@@ -97,7 +97,7 @@ export default function Navigation() {
             {/* Logo */}
             <Link href="#home" className="flex items-center space-x-2">
               {mounted ? (
-                <div className="relative w-32 h-10">
+                <div className="relative w-20 h-10">
                    <Image
                     src={isDark ? "/Ark8 Logo-White.svg" : "/Ark8 Logo-Black.svg"}
                     alt={config.siteName}

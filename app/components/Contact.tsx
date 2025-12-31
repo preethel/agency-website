@@ -102,8 +102,8 @@ export default function Contact() {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-secondary to-accent rounded-lg flex items-center justify-center flex-shrink-0">
-                    <MessageSquare className="w-6 h-6 text-gray-900" />
+                  <div className="w-12 h-12 bg-gradient-to-br from-secondary via-primary to-secondary rounded-lg flex items-center justify-center flex-shrink-0">
+                    <MessageSquare className="w-6 h-6 text-white" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 dark:text-white mb-1">
@@ -119,7 +119,7 @@ export default function Contact() {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-accent to-primary rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-gradient-to-br from-secondary to-primary rounded-lg flex items-center justify-center flex-shrink-0">
                     <User className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -249,7 +249,7 @@ export default function Contact() {
                 whileTap={{ scale: 0.98 }}
                 type="submit"
                 disabled={isLoading}
-                className="w-full px-8 py-4 bg-gradient-to-r from-primary via-secondary to-accent text-gray-900 font-semibold rounded-lg hover:shadow-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
+                className="w-full px-8 py-4 bg-primary text-white font-semibold rounded-lg hover:shadow-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
               >
                 {isLoading ? (
                   <>

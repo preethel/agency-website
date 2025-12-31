@@ -1,8 +1,8 @@
 "use client";
 
+import projects from "@/data/projects.json";
 import { motion } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
-import projects from "@/data/projects.json";
 
 export default function Projects() {
   const container = {
@@ -49,7 +49,7 @@ export default function Projects() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-black dark:text-white uppercase tracking-tight">
-            LASTEST PROJECT
+            LATEST PROJECT
           </h2>
           <p className="text-gray-600 dark:text-gray-400 text-lg max-w-2xl mx-auto">
             Showcasing our expertise in building cutting-edge solutions
