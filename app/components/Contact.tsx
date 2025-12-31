@@ -1,13 +1,13 @@
 "use client";
 
+import config from "@/data/config.json";
+import { zodResolver } from "@hookform/resolvers/zod";
 import { motion } from "framer-motion";
+import { Mail, MessageSquare, Send, User } from "lucide-react";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
 import toast from "react-hot-toast";
-import { Mail, MessageSquare, User, Send } from "lucide-react";
-import config from "@/data/config.json";
+import { z } from "zod";
 
 const schema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -65,7 +65,7 @@ export default function Contact() {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 gradient-text">
             Get In Touch
           </h2>
-          <p className="text-gray-600 dark:text-gray-400 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-800 dark:text-gray-200 text-lg max-w-2xl mx-auto">
             Have a project in mind? Let&apos;s discuss how we can help you
           </p>
         </motion.div>
@@ -94,7 +94,7 @@ export default function Contact() {
                     </h4>
                     <a
                       href={`mailto:${config.email}`}
-                      className="text-gray-600 dark:text-gray-400 hover:text-primary transition-colors"
+                      className="text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors"
                     >
                       {config.email}
                     </a>
@@ -103,7 +103,7 @@ export default function Contact() {
 
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-gradient-to-br from-secondary to-accent rounded-lg flex items-center justify-center flex-shrink-0">
-                    <MessageSquare className="w-6 h-6 text-white" />
+                    <MessageSquare className="w-6 h-6 text-gray-900" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 dark:text-white mb-1">
@@ -138,7 +138,7 @@ export default function Contact() {
               <h4 className="font-bold text-gray-900 dark:text-white mb-4">
                 Why Choose Us?
               </h4>
-              <ul className="space-y-3 text-gray-600 dark:text-gray-400">
+              <ul className="space-y-3 text-gray-700 dark:text-gray-300">
                 <li className="flex items-center space-x-2">
                   <div className="w-2 h-2 bg-primary rounded-full" />
                   <span>Expert team with 5+ years of experience</span>
@@ -249,7 +249,7 @@ export default function Contact() {
                 whileTap={{ scale: 0.98 }}
                 type="submit"
                 disabled={isLoading}
-                className="w-full px-8 py-4 bg-gradient-to-r from-primary via-secondary to-accent text-white font-semibold rounded-lg hover:shadow-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
+                className="w-full px-8 py-4 bg-gradient-to-r from-primary via-secondary to-accent text-gray-900 font-semibold rounded-lg hover:shadow-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
               >
                 {isLoading ? (
                   <>

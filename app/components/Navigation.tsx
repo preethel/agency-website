@@ -1,10 +1,11 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import Link from "next/link";
-import { Menu, X } from "lucide-react";
-import ThemeToggle from "./ThemeToggle";
 import config from "@/data/config.json";
+import { Menu, X } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import { useEffect, useState } from "react";
+import ThemeToggle from "./ThemeToggle";
 
 const navLinks = [
   { href: "#home", label: "HOME" },
@@ -19,6 +20,32 @@ export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
   const [scrolled, setScrolled] = useState(false);
+  const [isDark, setIsDark] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+    const theme = localStorage.getItem("theme");
+    if (theme === "dark") {
+      setIsDark(true);
+      document.documentElement.classList.add("dark");
+    } else {
+      setIsDark(false);
+      document.documentElement.classList.remove("dark");
+    }
+  }, []);
+
+  const toggleTheme = () => {
+    if (isDark) {
+      document.documentElement.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+      setIsDark(false);
+    } else {
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+      setIsDark(true);
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -69,9 +96,21 @@ export default function Navigation() {
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <Link href="#home" className="flex items-center space-x-2">
-              <span className="text-2xl font-bold text-black dark:text-white tracking-wider">
-                {config.siteName}
-              </span>
+              {mounted ? (
+                <div className="relative w-32 h-10">
+                   <Image
+                    src={isDark ? "/Ark8 Logo-White.svg" : "/Ark8 Logo-Black.svg"}
+                    alt={config.siteName}
+                    fill
+                    className="object-contain"
+                    priority
+                  />
+                </div>
+              ) : (
+                <span className="text-2xl font-bold text-black dark:text-white tracking-wider">
+                  {config.siteName}
+                </span>
+              )}
             </Link>
 
             {/* Desktop Navigation */}
@@ -89,12 +128,12 @@ export default function Navigation() {
                   {link.label}
                 </button>
               ))}
-              <ThemeToggle />
+              <ThemeToggle isDark={isDark} toggleTheme={toggleTheme} />
             </div>
 
             {/* Mobile Menu Button */}
             <div className="md:hidden flex items-center space-x-4">
-              <ThemeToggle />
+              <ThemeToggle isDark={isDark} toggleTheme={toggleTheme} />
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 className="text-gray-700 dark:text-gray-300"
@@ -120,7 +159,7 @@ export default function Navigation() {
                   onClick={() => scrollToSection(link.href)}
                   className={`block w-full text-left px-4 py-2 rounded-lg transition-colors ${
                     activeSection === link.href.slice(1)
-                      ? "bg-primary text-white"
+                      ? "bg-black text-white dark:bg-white dark:text-black"
                       : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
                   }`}
                 >

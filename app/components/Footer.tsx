@@ -1,7 +1,9 @@
 "use client";
 
-import { Github, Linkedin, Twitter, Heart } from "lucide-react";
 import config from "@/data/config.json";
+import { Github, Heart, Linkedin, Twitter } from "lucide-react";
+
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -10,9 +12,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <div>
-            <h3 className="text-2xl font-bold text-white mb-4 tracking-wider">
-              {config.siteName}
-            </h3>
+            <div className="relative w-32 h-10 mb-4">
+              <Image
+                src="/Ark8 Logo-White.svg"
+                alt={config.siteName}
+                fill
+                className="object-contain"
+              />
+            </div>
             <p className="text-gray-400 mb-4">{config.description}</p>
           </div>
 
