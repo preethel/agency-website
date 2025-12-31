@@ -2,19 +2,19 @@
   {
     "id": "1",
     "label": "YEARS",
-    "value": 5,
+    "value": 3,
     "suffix": "+"
   },
   {
     "id": "2",
     "label": "CLIENTS",
-    "value": 56,
+    "value": 10,
     "suffix": "+"
   },
   {
     "id": "3",
     "label": "COUNTRY",
-    "value": 20,
+    "value": 3,
     "suffix": "+"
   }
 ]
