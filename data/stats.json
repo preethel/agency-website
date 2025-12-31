@@ -1,26 +1,20 @@
 [
   {
     "id": "1",
-    "label": "Projects Completed",
-    "value": 50,
-    "suffix": "+"
-  },
-  {
-    "id": "2",
-    "label": "Years Experience",
+    "label": "YEARS",
     "value": 5,
     "suffix": "+"
   },
   {
-    "id": "3",
-    "label": "Happy Clients",
-    "value": 30,
+    "id": "2",
+    "label": "CLIENTS",
+    "value": 56,
     "suffix": "+"
   },
   {
-    "id": "4",
-    "label": "Satisfaction Rate",
-    "value": 100,
-    "suffix": "%"
+    "id": "3",
+    "label": "COUNTRY",
+    "value": 20,
+    "suffix": "+"
   }
 ]

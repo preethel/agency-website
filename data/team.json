@@ -25,5 +25,14 @@
     "linkedin": "https://www.linkedin.com/in/atiq-morshed-rabby",
     "skills": ["Python", "Go", "Docker", "Kubernetes", "Azure", "CI/CD", "Terraform", "DevOps"],
     "initials": "AR"
+  },
+  {
+    "id": "4",
+    "name": "Sarah Johnson",
+    "title": "UX/UI Designer & Brand Strategist",
+    "bio": "Creating beautiful and intuitive user experiences. Specializing in modern design systems, branding, and user-centered design principles.",
+    "linkedin": "https://www.linkedin.com/in/sarahjohnson",
+    "skills": ["Figma", "Adobe XD", "UI/UX", "Branding", "Design Systems", "Prototyping"],
+    "initials": "SJ"
   }
 ]

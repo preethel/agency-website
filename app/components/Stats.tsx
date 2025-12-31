@@ -25,7 +25,7 @@ function Counter({ value, suffix }: { value: number; suffix: string }) {
   }, [springValue]);
 
   return (
-    <div className="text-4xl sm:text-5xl md:text-6xl font-bold gradient-text">
+    <div className="text-5xl sm:text-6xl md:text-7xl font-bold text-white">
       <span ref={ref}>0</span>
       {suffix}
     </div>
@@ -34,20 +34,26 @@ function Counter({ value, suffix }: { value: number; suffix: string }) {
 
 export default function Stats() {
   return (
-    <section className="py-20 bg-gradient-to-br from-primary via-secondary to-accent">
+    <section className="py-20 bg-white dark:bg-gray-900">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-8"
+          className="grid grid-cols-1 md:grid-cols-3 gap-8"
         >
           {stats.map((stat) => (
-            <div key={stat.id} className="text-center">
+            <motion.div
+              key={stat.id}
+              whileHover={{ y: -10 }}
+              className="bg-black dark:bg-white p-12 text-center"
+            >
               <Counter value={stat.value} suffix={stat.suffix} />
-              <p className="text-white/90 text-lg mt-2">{stat.label}</p>
-            </div>
+              <p className="text-white dark:text-black text-xl font-bold mt-4 uppercase tracking-wider">
+                {stat.label}
+              </p>
+            </motion.div>
           ))}
         </motion.div>
       </div>

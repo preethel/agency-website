@@ -7,13 +7,12 @@ import ThemeToggle from "./ThemeToggle";
 import config from "@/data/config.json";
 
 const navLinks = [
-  { href: "#home", label: "Home" },
-  { href: "#about", label: "About" },
-  { href: "#services", label: "Services" },
-  { href: "#projects", label: "Projects" },
-  { href: "#team", label: "Team" },
-  { href: "#testimonials", label: "Testimonials" },
-  { href: "#contact", label: "Contact" },
+  { href: "#home", label: "HOME" },
+  { href: "#about", label: "ABOUT" },
+  { href: "#services", label: "SERVICES" },
+  { href: "#projects", label: "PORTFOLIO" },
+  { href: "#testimonials", label: "TESTIMONIAL" },
+  { href: "#contact", label: "CONTACT" },
 ];
 
 export default function Navigation() {
@@ -62,15 +61,15 @@ export default function Navigation() {
       <nav
         className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
           scrolled
-            ? "bg-white/80 dark:bg-gray-900/80 backdrop-blur-md shadow-lg"
-            : "bg-transparent"
+            ? "bg-white/95 dark:bg-gray-900/95 backdrop-blur-md shadow-sm border-b border-gray-200 dark:border-gray-800"
+            : "bg-white dark:bg-gray-900"
         }`}
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <Link href="#home" className="flex items-center space-x-2">
-              <span className="text-2xl font-bold gradient-text">
+              <span className="text-2xl font-bold text-black dark:text-white tracking-wider">
                 {config.siteName}
               </span>
             </Link>
@@ -81,10 +80,10 @@ export default function Navigation() {
                 <button
                   key={link.href}
                   onClick={() => scrollToSection(link.href)}
-                  className={`text-sm font-medium transition-colors hover:text-primary ${
+                  className={`text-sm font-semibold transition-colors hover:text-black dark:hover:text-white ${
                     activeSection === link.href.slice(1)
-                      ? "text-primary"
-                      : "text-gray-700 dark:text-gray-300"
+                      ? "text-black dark:text-white"
+                      : "text-gray-600 dark:text-gray-400"
                   }`}
                 >
                   {link.label}

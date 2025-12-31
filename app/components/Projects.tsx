@@ -48,8 +48,8 @@ export default function Projects() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 gradient-text">
-            Our Projects
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-black dark:text-white uppercase tracking-tight">
+            LASTEST PROJECT
           </h2>
           <p className="text-gray-600 dark:text-gray-400 text-lg max-w-2xl mx-auto">
             Showcasing our expertise in building cutting-edge solutions
@@ -68,10 +68,10 @@ export default function Projects() {
               key={project.id}
               variants={item}
               whileHover={{ y: -10 }}
-              className="glass rounded-lg overflow-hidden group"
+              className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 overflow-hidden group hover:shadow-xl transition-all"
             >
-              {/* Gradient Header */}
-              <div className="h-2 bg-gradient-to-r from-primary via-secondary to-accent" />
+              {/* Black Header */}
+              <div className="h-2 bg-black dark:bg-white" />
 
               <div className="p-6">
                 {/* Project Header */}
@@ -127,7 +127,7 @@ export default function Projects() {
                   href={project.repoUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-6 flex items-center justify-center space-x-2 px-4 py-2 bg-gradient-to-r from-primary to-secondary text-white rounded-lg hover:shadow-lg transition-all group"
+                  className="mt-6 flex items-center justify-center space-x-2 px-4 py-2 bg-black dark:bg-white text-white dark:text-black font-bold hover:shadow-lg transition-all group uppercase tracking-wide"
                 >
                   <span>View Project</span>
                   <ExternalLink className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

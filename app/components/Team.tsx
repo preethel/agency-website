@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Linkedin } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import team from "@/data/team.json";
 
 export default function Team() {
@@ -20,22 +20,42 @@ export default function Team() {
     show: { opacity: 1, scale: 1 },
   };
 
+  const scrollToContact = () => {
+    const element = document.getElementById("contact");
+    if (element) {
+      const offset = 80;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
-    <section id="team" className="py-20 bg-gray-50 dark:bg-gray-900">
+    <section id="team" className="py-20 bg-white dark:bg-gray-900">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-16 max-w-4xl mx-auto"
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 gradient-text">
-            Meet Our Team
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 text-black dark:text-white leading-tight uppercase">
+            WE&apos;RE A TEAM OF CREATIVES AND STRATEGISTS BUILDING BOLD BRANDS AND DIGITAL EXPERIENCES. FROM STARTUPS TO LEADERS — <span className="border-b-4 border-black dark:border-white">YOUR SUCCESS IS OUR MISSION</span>.
           </h2>
-          <p className="text-gray-600 dark:text-gray-400 text-lg max-w-2xl mx-auto">
-            Talented professionals dedicated to delivering excellence
-          </p>
+          
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={scrollToContact}
+            className="px-8 py-4 bg-black dark:bg-white text-white dark:text-black font-bold rounded-none shadow-lg hover:shadow-xl transition-all flex items-center space-x-3 uppercase tracking-wider mx-auto"
+          >
+            <span>CONSULT NOW</span>
+            <ArrowRight className="w-5 h-5" />
+          </motion.button>
         </motion.div>
 
         <motion.div
@@ -43,57 +63,21 @@ export default function Team() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-2 md:grid-cols-2 gap-6 max-w-3xl mx-auto mt-16"
         >
-          {team.map((member) => (
+          {team.slice(0, 4).map((member) => (
             <motion.div
               key={member.id}
               variants={item}
-              whileHover={{ y: -10 }}
-              className="glass rounded-lg p-8 text-center group"
+              whileHover={{ scale: 1.05 }}
+              className="aspect-square bg-gray-200 dark:bg-gray-800 overflow-hidden group"
             >
-              {/* Avatar */}
-              <div className="relative inline-block mb-6">
-                <div className="w-32 h-32 rounded-full bg-gradient-to-br from-primary via-secondary to-accent flex items-center justify-center">
-                  <div className="w-30 h-30 rounded-full bg-white dark:bg-gray-800 flex items-center justify-center">
-                    <span className="text-4xl font-bold gradient-text">
-                      {member.initials}
-                    </span>
-                  </div>
-                </div>
+              {/* Avatar with initials */}
+              <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-300 to-gray-400 dark:from-gray-700 dark:to-gray-800">
+                <span className="text-6xl font-bold text-black dark:text-white">
+                  {member.initials}
+                </span>
               </div>
-
-              {/* Info */}
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
-                {member.name}
-              </h3>
-              <p className="text-primary font-semibold mb-4">{member.title}</p>
-              <p className="text-gray-600 dark:text-gray-400 mb-6">
-                {member.bio}
-              </p>
-
-              {/* Skills */}
-              <div className="flex flex-wrap gap-2 justify-center mb-6">
-                {member.skills.slice(0, 4).map((skill, idx) => (
-                  <span
-                    key={idx}
-                    className="px-3 py-1 text-xs font-medium bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full"
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
-
-              {/* LinkedIn Link */}
-              <a
-                href={member.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-primary to-secondary text-white rounded-lg hover:shadow-lg transition-all group"
-              >
-                <Linkedin className="w-5 h-5" />
-                <span>Connect on LinkedIn</span>
-              </a>
             </motion.div>
           ))}
         </motion.div>
