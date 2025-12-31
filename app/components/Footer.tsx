@@ -66,6 +66,14 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-bold mb-4 uppercase tracking-wider">Services</h4>
             <ul className="space-y-2">
+                            <li>
+                <a
+                  href="#services"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Web Development
+                </a>
+              </li>
               <li>
                 <a
                   href="#services"
@@ -74,14 +82,7 @@ export default function Footer() {
                   UX/UI Design
                 </a>
               </li>
-              <li>
-                <a
-                  href="#services"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Web Development
-                </a>
-              </li>
+
               <li>
                 <a
                   href="#services"

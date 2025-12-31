@@ -48,5 +48,15 @@
     "id": "10",
     "name": "Azure",
     "category": "Cloud"
+  },
+  {
+    "id": "11",
+    "name": "Go",
+    "category": "Language"
+  },
+  {
+    "id": "12",
+    "name": "Kubernetes",
+    "category": "DevOps"
   }
 ]

@@ -1,8 +1,9 @@
 "use client";
 
+import team from "@/data/team.json";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import team from "@/data/team.json";
+import NextImage from "next/image";
 
 export default function Team() {
   const container = {
@@ -69,14 +70,37 @@ export default function Team() {
             <motion.div
               key={member.id}
               variants={item}
-              whileHover={{ scale: 1.05 }}
-              className="aspect-square bg-gray-200 dark:bg-gray-800 overflow-hidden group"
+              className="relative aspect-square bg-gray-200 dark:bg-gray-800 overflow-hidden group cursor-pointer"
             >
-              {/* Avatar with initials */}
-              <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-300 to-gray-400 dark:from-gray-700 dark:to-gray-800">
-                <span className="text-6xl font-bold text-black dark:text-white">
-                  {member.initials}
-                </span>
+              {/* Avatar with initials or Image */}
+              {member.image ? (
+                <div className="relative w-full h-full">
+                  <NextImage
+                    src={member.image}
+                    alt={member.name}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                </div>
+              ) : (
+                <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-300 to-gray-400 dark:from-gray-700 dark:to-gray-800">
+                  <span className="text-6xl font-bold text-black dark:text-white">
+                    {member.initials}
+                  </span>
+                </div>
+              )}
+
+              {/* Info Overlay */}
+              <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 text-white translate-y-4 group-hover:translate-y-0 transform transition-transform">
+                <h3 className="text-xl font-bold mb-1">{member.name}</h3>
+                <p className="text-sm text-gray-300 mb-3 font-medium">{member.title}</p>
+                <div className="flex flex-wrap gap-2 mb-2">
+                  {member.skills.slice(0, 3).map((skill, idx) => (
+                    <span key={idx} className="text-xs bg-white/20 px-2 py-1 rounded backdrop-blur-sm">
+                      {skill}
+                    </span>
+                  ))}
+                </div>
               </div>
             </motion.div>
           ))}
