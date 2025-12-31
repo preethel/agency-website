@@ -1,12 +1,12 @@
 "use client";
 
+import { zodResolver } from "@hookform/resolvers/zod";
 import { motion } from "framer-motion";
+import { Mail } from "lucide-react";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
 import toast from "react-hot-toast";
-import { Mail } from "lucide-react";
+import { z } from "zod";
 
 const schema = z.object({
   email: z.string().email("Please enter a valid email address"),
@@ -49,7 +49,7 @@ export default function Newsletter() {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-primary via-secondary to-accent">
+    <section className="py-20 bg-black dark:bg-gray-950 text-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

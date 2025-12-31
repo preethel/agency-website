@@ -1,24 +1,31 @@
 "use client";
 
-import { Github, Linkedin, Twitter, Heart } from "lucide-react";
 import config from "@/data/config.json";
+import { Github, Heart, Linkedin, Twitter } from "lucide-react";
+
+import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white py-12">
+    <footer className="bg-black dark:bg-gray-950 text-white py-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <div>
-            <h3 className="text-2xl font-bold gradient-text mb-4">
-              {config.siteName}
-            </h3>
+            <div className="relative w-32 h-10 mb-4">
+              <Image
+                src="/Ark8 Logo-White.svg"
+                alt={config.siteName}
+                fill
+                className="object-contain"
+              />
+            </div>
             <p className="text-gray-400 mb-4">{config.description}</p>
           </div>
 
-          {/* Quick Links */}
+          {/* Company */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
+            <h4 className="text-lg font-bold mb-4 uppercase tracking-wider">Company</h4>
             <ul className="space-y-2">
               <li>
                 <a
@@ -26,6 +33,14 @@ export default function Footer() {
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Home
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#about"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  About Us
                 </a>
               </li>
               <li>
@@ -38,40 +53,108 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="#projects"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Projects
-                </a>
-              </li>
-              <li>
-                <a
                   href="#team"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Team
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#contact"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Contact
+                  Career
                 </a>
               </li>
             </ul>
           </div>
 
-          {/* Social */}
+          {/* Services */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Connect With Us</h4>
+            <h4 className="text-lg font-bold mb-4 uppercase tracking-wider">Services</h4>
+            <ul className="space-y-2">
+                            <li>
+                <a
+                  href="#services"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Web Development
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#services"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  UX/UI Design
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="#services"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Branding
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#services"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Digital Strategy
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Resources */}
+          <div>
+            <h4 className="text-lg font-bold mb-4 uppercase tracking-wider">Resources</h4>
+            <ul className="space-y-2">
+              <li>
+                <a
+                  href="#projects"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Blog
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#projects"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Case Studies
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#projects"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Resources
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#newsletter"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Newsletter
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* WHO & MAIL Section */}
+        <div className="border-t border-gray-800 pt-8 mb-8">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <div>
+              <h4 className="text-lg font-bold mb-2 uppercase tracking-wider">WHO & MAIL</h4>
+              <p className="text-gray-400">Stay updated with our latest news</p>
+            </div>
             <div className="flex space-x-4">
               <a
                 href={config.social.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary transition-colors"
+                className="w-10 h-10 bg-gray-900 flex items-center justify-center hover:bg-white hover:text-black transition-colors"
               >
                 <Github className="w-5 h-5" />
               </a>
@@ -79,7 +162,7 @@ export default function Footer() {
                 href={config.social.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary transition-colors"
+                className="w-10 h-10 bg-gray-900 flex items-center justify-center hover:bg-white hover:text-black transition-colors"
               >
                 <Linkedin className="w-5 h-5" />
               </a>
@@ -87,7 +170,7 @@ export default function Footer() {
                 href={config.social.twitter}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary transition-colors"
+                className="w-10 h-10 bg-gray-900 flex items-center justify-center hover:bg-white hover:text-black transition-colors"
               >
                 <Twitter className="w-5 h-5" />
               </a>

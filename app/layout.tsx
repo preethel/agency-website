@@ -1,21 +1,21 @@
 import type { Metadata } from "next";
-import "./globals.css";
 import { Toaster } from "react-hot-toast";
+import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Agency Website - Transforming Ideas into Digital Reality",
-  description: "We build cutting-edge web applications, AI solutions, and SaaS platforms. Expert team specializing in Full-Stack Development, AI/ML, and Cloud Solutions.",
-  keywords: ["web development", "AI solutions", "SaaS platforms", "full-stack development", "fintech", "cloud solutions"],
-  authors: [{ name: "Agency Team" }],
+  title: "Ark8 Space - Designing the Future",
+  description: "We craft premium digital experiences, innovative strategies, and pixel-perfect visuals that define your brand. Expert team specializing in Full-Stack Development and Design.",
+  keywords: ["web development", "UI/UX design", "Ark8 Space", "digital agency", "branding"],
+  authors: [{ name: "Ark8 Space Team" }],
   openGraph: {
-    title: "Agency Website - Transforming Ideas into Digital Reality",
-    description: "We build cutting-edge web applications, AI solutions, and SaaS platforms",
+    title: "Ark8 Space - Designing the Future",
+    description: "We craft premium digital experiences, innovative strategies, and pixel-perfect visuals that define your brand.",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Agency Website - Transforming Ideas into Digital Reality",
-    description: "We build cutting-edge web applications, AI solutions, and SaaS platforms",
+    title: "Ark8 Space - Designing the Future",
+    description: "We craft premium digital experiences, innovative strategies, and pixel-perfect visuals that define your brand.",
   },
 };
 

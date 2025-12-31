@@ -1,29 +1,54 @@
 [
   {
     "id": "1",
-    "name": "Preethel",
-    "title": "Full-Stack Developer & Tech Lead",
-    "bio": "Expert in building scalable web applications with React, Next.js, TypeScript, and .NET. Specialized in SaaS platforms, AI/ML solutions, and fintech systems.",
-    "linkedin": "https://www.linkedin.com/in/preethel",
-    "skills": ["React", "Next.js", "TypeScript", "C#", ".NET", "Node.js", "AI/ML", "Cloud Architecture"],
-    "initials": "P"
+    "name": "Atiq Morshed Rabby",
+    "title": "UI/UX Designer & Visualizer",
+    "bio": "Creative designer focused on visual storytelling and user-centric interfaces. Specialized in UI/UX design, motion graphics, and brand identity.",
+    "linkedin": "https://www.linkedin.com/in/atiq-morshed-rabby",
+    "skills": [
+      "UI/UX Design",
+      "Figma",
+      "Motion Graphics",
+      "Visual Storytelling",
+      "Graphic Design",
+      "Adobe Creative Suite"
+    ],
+    "initials": "AR",
+    "image": "/team/atiq.jpg"
   },
   {
     "id": "2",
     "name": "Rakibul Islam Raju",
-    "title": "Senior Full-Stack Engineer",
-    "bio": "Passionate about creating elegant solutions to complex problems. Expertise in modern web technologies, microservices architecture, and cloud solutions.",
+    "title": "Senior Full Stack Engineer",
+    "bio": "Passionate frontend-focused developer creating elegant user experiences. Expertise in React, Next.js, Django, and modern web technologies.",
     "linkedin": "https://www.linkedin.com/in/rakibul-islam-raju",
-    "skills": ["JavaScript", "TypeScript", "React", "Node.js", "Docker", "AWS", "PostgreSQL", "MongoDB"],
-    "initials": "RR"
+    "skills": [
+      "React.js",
+      "Next.js",
+      "Django",
+      "Node.js",
+      "JavaScript",
+      "Python",
+      "Material UI"
+    ],
+    "initials": "RR",
+    "image": "/team/rakibul.jpg"
   },
   {
     "id": "3",
-    "name": "Atiq Morshed Rabby",
-    "title": "Software Engineer & DevOps Specialist",
-    "bio": "Focused on building robust backend systems and automating deployment pipelines. Strong background in cloud infrastructure and containerization.",
-    "linkedin": "https://www.linkedin.com/in/atiq-morshed-rabby",
-    "skills": ["Python", "Go", "Docker", "Kubernetes", "Azure", "CI/CD", "Terraform", "DevOps"],
-    "initials": "AR"
+    "name": "Preethel",
+    "title": "Software Engineer",
+    "bio": "Expert in building scalable web applications with .NET Core, Azure, and Angular. Specialized in SaaS platforms, clean architecture, and cloud solutions.",
+    "linkedin": "https://www.linkedin.com/in/preethel",
+    "skills": [
+      ".NET Core",
+      "Azure",
+      "Angular",
+      "C#",
+      "Blazor",
+      "Microservices"
+    ],
+    "initials": "P",
+    "image": "/team/preethel.jpg"
   }
 ]

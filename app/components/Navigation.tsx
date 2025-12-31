@@ -1,25 +1,51 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import Link from "next/link";
-import { Menu, X } from "lucide-react";
-import ThemeToggle from "./ThemeToggle";
 import config from "@/data/config.json";
+import { Menu, X } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import { useEffect, useState } from "react";
+import ThemeToggle from "./ThemeToggle";
 
 const navLinks = [
-  { href: "#home", label: "Home" },
-  { href: "#about", label: "About" },
-  { href: "#services", label: "Services" },
-  { href: "#projects", label: "Projects" },
-  { href: "#team", label: "Team" },
-  { href: "#testimonials", label: "Testimonials" },
-  { href: "#contact", label: "Contact" },
+  { href: "#home", label: "HOME" },
+  { href: "#about", label: "ABOUT" },
+  { href: "#services", label: "SERVICES" },
+  { href: "#projects", label: "PORTFOLIO" },
+  { href: "#testimonials", label: "TESTIMONIAL" },
+  { href: "#contact", label: "CONTACT" },
 ];
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
   const [scrolled, setScrolled] = useState(false);
+  const [isDark, setIsDark] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+    const theme = localStorage.getItem("theme");
+    if (theme === "dark") {
+      setIsDark(true);
+      document.documentElement.classList.add("dark");
+    } else {
+      setIsDark(false);
+      document.documentElement.classList.remove("dark");
+    }
+  }, []);
+
+  const toggleTheme = () => {
+    if (isDark) {
+      document.documentElement.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+      setIsDark(false);
+    } else {
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+      setIsDark(true);
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -62,17 +88,29 @@ export default function Navigation() {
       <nav
         className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
           scrolled
-            ? "bg-white/80 dark:bg-gray-900/80 backdrop-blur-md shadow-lg"
-            : "bg-transparent"
+            ? "bg-white/95 dark:bg-gray-900/95 backdrop-blur-md shadow-sm border-b border-gray-200 dark:border-gray-800"
+            : "bg-white dark:bg-gray-900"
         }`}
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <Link href="#home" className="flex items-center space-x-2">
-              <span className="text-2xl font-bold gradient-text">
-                {config.siteName}
-              </span>
+              {mounted ? (
+                <div className="relative w-32 h-10">
+                   <Image
+                    src={isDark ? "/Ark8 Logo-White.svg" : "/Ark8 Logo-Black.svg"}
+                    alt={config.siteName}
+                    fill
+                    className="object-contain"
+                    priority
+                  />
+                </div>
+              ) : (
+                <span className="text-2xl font-bold text-black dark:text-white tracking-wider">
+                  {config.siteName}
+                </span>
+              )}
             </Link>
 
             {/* Desktop Navigation */}
@@ -81,21 +119,21 @@ export default function Navigation() {
                 <button
                   key={link.href}
                   onClick={() => scrollToSection(link.href)}
-                  className={`text-sm font-medium transition-colors hover:text-primary ${
+                  className={`text-sm font-semibold transition-colors hover:text-black dark:hover:text-white ${
                     activeSection === link.href.slice(1)
-                      ? "text-primary"
-                      : "text-gray-700 dark:text-gray-300"
+                      ? "text-black dark:text-white"
+                      : "text-gray-600 dark:text-gray-400"
                   }`}
                 >
                   {link.label}
                 </button>
               ))}
-              <ThemeToggle />
+              <ThemeToggle isDark={isDark} toggleTheme={toggleTheme} />
             </div>
 
             {/* Mobile Menu Button */}
             <div className="md:hidden flex items-center space-x-4">
-              <ThemeToggle />
+              <ThemeToggle isDark={isDark} toggleTheme={toggleTheme} />
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 className="text-gray-700 dark:text-gray-300"
@@ -121,7 +159,7 @@ export default function Navigation() {
                   onClick={() => scrollToSection(link.href)}
                   className={`block w-full text-left px-4 py-2 rounded-lg transition-colors ${
                     activeSection === link.href.slice(1)
-                      ? "bg-primary text-white"
+                      ? "bg-black text-white dark:bg-white dark:text-black"
                       : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
                   }`}
                 >
