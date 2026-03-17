@@ -107,7 +107,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 dark:text-white mb-1">
-                      Phone
+                      Mobile
                     </h4>
                     <a
                       href={`tel:${config.phone}`}
@@ -126,9 +126,9 @@ export default function Contact() {
                     <h4 className="font-semibold text-gray-900 dark:text-white mb-1">
                       Address
                     </h4>
-                    <p className="text-gray-600 dark:text-gray-400">
+                    <address className="text-gray-600 dark:text-gray-400 not-italic leading-relaxed">
                       {config.address}
-                    </p>
+                    </address>
                   </div>
                 </div>
               </div>
